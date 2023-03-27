@@ -6,7 +6,21 @@ const options = {
 	}
 };
 
-fetch('https://travel-advisor.p.rapidapi.com/attractions/list-by-latlng?longitude=109.19553&latitude=12.235588&lunit=km&currency=USD&lang=en_US', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+
+window.addEventListener('DOMContentLoaded', async() => {
+
+    const popularDes = document.getElementById('popular-des')
+    let response = await fetch('https://travel-advisor.p.rapidapi.com/locations/search?query=popular%20location&limit=30&offset=0&units=km&location_id=1&currency=USD&sort=relevance&lang=en_US', options)
+    let user = await response.json()
+    console.log(user);
+        for(let i = 0; i < 4; i++){
+        const link = document.createElement('a');
+        link.innerText = user.data[i].result_object.address
+        const list = document.createElement('li');
+        list.append(link)
+        popularDes.append(list)
+
+    }
+});
+
+
