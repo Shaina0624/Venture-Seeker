@@ -44,12 +44,21 @@
       background-color: #C3C49E;
       font-family: Italiana;
     }
+    .field{
+        display: flex;
+    }
     input {
-  width: 45%;
+  width: 120%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
   border: 2px solid black;
   border-radius: 15px;
   opacity: .65;
+    }
+    #popular-des {
+        display: flex
+    }
+    #popular-des2 {
+        display: flex
     }

@@ -13,7 +13,6 @@
 	<body>
 		<nav>
 				<div id="logoPic">
-					<!-- <img id='square' src="photos/7263.png" alt="descriptive text"> -->
 					<i class="fa-solid fa-plane fa-beat-fade" style="color: #1b4332;"></i>
 				</div>
 				<div>Home</div>
@@ -21,13 +20,17 @@
 		</nav>
 		<section class="section1">
 			<h1>Venture Seeker</h1>
-			<input type="text" placeholder="Where to?">
+			<form id="search" class="ui form">
+				<div class="field">
+				  <input type="text" name="search" placeholder="Where to?">
+				  <button class="ui button" type="submit">Go</button>
+				</div>
+			</form>
 		</section>
 		<section class="section2">
 			<h1>Popular Destinations</h1>
-			<ul id="popular-des">
-
-			</ul>
+			<div id="popular-des"></div>
+			<div id="popular-des2"></div>
 		</section>
 		<script type="text/javascript" src="script.js"></script>
 		<script type="text/javascript" src="smooth.js"></script>
