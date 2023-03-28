@@ -23,7 +23,7 @@
 			<form id="search" class="ui form">
 				<div class="field">
 				  <input type="text" name="search" placeholder="Where to?">
-				  <button class="ui button" type="submit">Go</button>
+				  <button id="button">Search</button>
 				</div>
 			</form>
 		</section>
@@ -33,6 +33,14 @@
 			<div id="popular-des2"></div>
 		</section>
 		<script type="text/javascript" src="script.js"></script>
-		<script type="text/javascript" src="smooth.js"></script>
+		<script>
+			window.addEventListener('load', () => {
+				const button = document.querySelector("button");
+				button.addEventListener("button", () => {
+					document.querySelector('#enter').value = "";
+				});
+			});
+		</script>
 	</body>
+
 </html>

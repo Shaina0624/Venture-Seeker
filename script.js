@@ -40,5 +40,10 @@ document.querySelector("#search").addEventListener("submit", async (e) => {
     e.preventDefault()
     const searchTerm = e.target[0].value
     console.log(searchTerm)
-
 })
+document.ready(()=> {
+	alert("nigge");
+	'#clear'.on('click', () =>{
+		'#enter'.val("");
+	});
+});
