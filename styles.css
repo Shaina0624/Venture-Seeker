@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
   }
+
   nav{
     position:absolute;
     width: 100%;
@@ -14,7 +15,8 @@
     justify-content: space-evenly;
     align-items: center;
   }
-  /* .fa-solid {
+
+  .fa-solid {
     margin-left: 25px;
   } */
 
