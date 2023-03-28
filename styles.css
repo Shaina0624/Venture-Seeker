@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
   }
+
   nav{
     position:fixed;
     width: 100%;
@@ -15,6 +16,7 @@
     align-items: center;
     gap: 100px;
   }
+
   .fa-solid {
     margin-left: 25px;
   }
