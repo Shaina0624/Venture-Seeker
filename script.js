@@ -62,20 +62,19 @@ function displayLocations(location, pictures){
 }
 
 
-
 document.querySelector("#search").addEventListener("submit", async (e) => {
     e.preventDefault()
     const searchTerm = e.target[0].value
     console.log(searchTerm)
     const response3 = await fetch(`https://travel-advisor.p.rapidapi.com/locations/search?query=${searchTerm}&limit=30&offset=0&units=km&location_id=1&currency=USD&sort=relevance&lang=en_US`, options)
     const response4 = await fetch(`https://api.pexels.com/v1/search?query=${searchTerm}`,options2 );
-    const user3 = await response3.json();
-    const user4 = await response4.json();
+    user3 = await response3.json();
+    user4 = await response4.json();
     console.log(user3)
-    // localStorage.setItem("user3", JSON.stringify(user3));
-    // localStorage.setItem("user4", JSON.stringify(user4));
-    // console.log(user3);
-    // console.log(user4)
 })
+console.log(response3);
+console.log(response4);
+
+
 
 
