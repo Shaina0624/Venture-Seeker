@@ -23,7 +23,6 @@ async function fetchLocation (){
     let response = await fetch('https://travel-advisor.p.rapidapi.com/locations/search?query=popular%20location&limit=30&offset=0&units=km&location_id=1&currency=USD&sort=relevance&lang=en_US', options);
     let user = await response.json();
     let locations = [];
-    // console.log(user);
         for(let i = 0; i < 4; i++){
         locations.push(user.data[i].result_object.address)
     }
@@ -50,8 +49,8 @@ function displayLocations(location, pictures){
         const pic = document.createElement('img');
         const caption = document.createElement('figcaption')
         pic.src = pictures[i]
-        pic.style.width = '300px'
-        pic.style.height = '300px'
+        pic.style.width = '100px'
+        pic.style.height = '100px'
         pic.style.borderRadius = "5px";
          caption.innerText = location[i]
         const frame = document.createElement('div');
@@ -63,7 +62,7 @@ function displayLocations(location, pictures){
 
 }
 
-
+console.log("hi")
 
 
 document.querySelector("#search").addEventListener("submit", async (e) => {
@@ -71,9 +70,14 @@ document.querySelector("#search").addEventListener("submit", async (e) => {
     const searchTerm = e.target[0].value
     console.log(searchTerm)
     const response3 = await fetch(`https://travel-advisor.p.rapidapi.com/locations/search?query=${searchTerm}&limit=30&offset=0&units=km&location_id=1&currency=USD&sort=relevance&lang=en_US`, options)
+    const response4 = await fetch(`https://api.pexels.com/v1/search?query=${searchTerm}`,options2 );
     const user3 = await response3.json();
+    const user4 = await response4.json();
     console.log(user3)
-
+    // localStorage.setItem("user3", JSON.stringify(user3));
+    // localStorage.setItem("user4", JSON.stringify(user4));
+    // console.log(user3);
+    // console.log(user4)
 })
 
 
