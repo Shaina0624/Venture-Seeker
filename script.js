@@ -49,8 +49,8 @@ function displayLocations(location, pictures){
         const pic = document.createElement('img');
         const caption = document.createElement('figcaption')
         pic.src = pictures[i]
-        pic.style.width = '100px'
-        pic.style.height = '100px'
+        pic.style.width = '300px'
+        pic.style.height = '300px'
         pic.style.borderRadius = "5px";
          caption.innerText = location[i]
         const frame = document.createElement('div');
@@ -59,10 +59,8 @@ function displayLocations(location, pictures){
         popularDes.append(frame)
         popularDes.append(caption)
     }
-
 }
 
-console.log("hi")
 
 
 document.querySelector("#search").addEventListener("submit", async (e) => {
