@@ -7,14 +7,11 @@ const options = {
 };
 const actCards = document.querySelector(".act-cards");
 
+
 document.addEventListener("DOMContentLoaded", async (e) => {
-   let response = await fetch(
-    ``
-   );
-   let catch = await response.json();
-    console.log(catch)
-    for(let i = 0; i < 5; i++){
-      let links = document.createElement("a")
-      let article = 
-    }
+    let location = e.target[0].value;
+    console.log(location);
+   let response = await fetch(`https://travel-advisor.p.rapidapi.com/attractions/list?location_id=298571&currency=USD&lang=en_US&lunit=km&sort=recommended`, options);
+   const user = response.json();
+   console.log(user)
   })
