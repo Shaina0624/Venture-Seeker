@@ -37,21 +37,87 @@
 	<body>
 		<section class="section1">
 			<div class="photo">
-				<img class="image"src="https://media-cdn.tripadvisor.com/media/photo-m/1280/1d/81/30/3f/caption.jpg" width="700" height="600">
+				<img id="image"src="">
 			</div>
-			<div class="location-description">
-			<h1>City, Country</h1>
-			<p>Description of the location</p>
+			<div id="location-description">
+			<h1 id = "locationName">City, Country</h1>
+			<p id = 'locationsDescription'>Description of the location</p>
 			</div>
   		</section>
 		<section class="section2">
 			<h1>Activities</h1>
 			<div class = "act-cards"></div>
+            <div class="container text-center my-3">
+                <h2 class="font-weight-light">Bootstrap 4 - Multi Item Carousel</h2>
+                <div class="row mx-auto my-auto">
+                    <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+                        <div class="carousel-inner w-100" role="listbox">
+                            <div class="carousel-item active">
+                                <div class="col-md-4">
+                                    <div class="card card-body">
+                                        <img class="img-fluid" src="http://placehold.it/380?text=1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-md-4">
+                                    <div class="card card-body">
+                                        <img class="img-fluid" src="http://placehold.it/380?text=2">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-md-4">
+                                    <div class="card card-body">
+                                        <img class="img-fluid" src="http://placehold.it/380?text=3">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-md-4">
+                                    <div class="card card-body">
+                                        <img class="img-fluid" src="http://placehold.it/380?text=4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-md-4">
+                                    <div class="card card-body">
+                                        <img class="img-fluid" src="http://placehold.it/380?text=5">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-md-4">
+                                    <div class="card card-body">
+                                        <img class="img-fluid" src="http://placehold.it/380?text=6">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next w-auto" href="#recipeCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <h5 class="mt-2">Advances one slide at a time</h5>
+            </div>
+        </section>
+        <section class="section3"></section>
 			<h1>Restaurants</h1>
-
+            <div class = "act-cards"></div>
+        </section>
+        <section class="section4">
 			<h1>Accommodations</h1>
+            <div class = "act-cards"></div>
+        </section>
 
-		</section>
+		
         <script type="text/javascript" src="script.js"></script>
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
