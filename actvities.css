@@ -7,3 +7,34 @@
   body {
     background-color: #C3C49E;;
   }
+  nav{
+    position:absolute;
+    width: 100%;
+    top:0px;
+    height: 60px;
+    background-color: #808080;
+    opacity: 0.7;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .fa-solid {
+    margin-left: 25px;
+  }
+
+  .image {
+    padding-left: 100px;
+  }
+  .location-description{
+    padding-left: 20px;
+  }
+.section1 {
+  display:flex;
+  padding-top: 50px;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}

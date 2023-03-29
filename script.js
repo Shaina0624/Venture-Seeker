@@ -1,7 +1,7 @@
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '8c3e878a53msh4f5244ae3c2d048p13e108jsn0e61851157af',
+		'X-RapidAPI-Key': '2df429e771msh05586fa7de4000dp18bf10jsne610e6ce195a',
 		'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
 	}
 };
