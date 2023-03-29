@@ -71,10 +71,57 @@ document.querySelector("#search").addEventListener("submit", async (e) => {
     user3 = await response3.json();
     user4 = await response4.json();
     console.log(user3)
+    console.log(user4)
+    console.log(user3.data[2].result_type)
+    setAttrations(user3, user4);
 })
-console.log(response3);
-console.log(response4);
 
+function setAttrations(user3, user4){
+    const picture = document.getElementById("image");
+    const locationName = document.getElementById('locationName');
+    const locationsDescription = document.getElementById('locationsDescription')
+    picture.src = user4.photos[0].src.large
+    picture.style.paddingLeft = '100px'
+    picture.style.height  = '500px';
+    picture.style.width  = '700px'
+    locationName.innerText = user3.data[0].result_object.location_string;
+    locationsDescription.innerText = user3.data[0].result_object.geo_description;
+    for(let i = 0; i < 30; i++ ){
+        if(user3.data[i].result_type === 'lodging'){
+            console.log(user3.data[i].result_type)
+
+
+        } else if (user3.data[i].result_type === 'restaurants'){
+            console.log(user3.data[i].result_type)
+
+        } else if (user3.data[i].result_type === 'things_to_do' || user3.data[i].result_type === 'activities' || user3.data[i].result_type === 'geos'){
+            console.log(user3.data[i].result_type)
+
+        }
+    }
+}
+
+$('#recipeCarousel').carousel({
+    interval: 10000
+  })
+  
+  $('.carousel .carousel-item').each(function(){
+      var minPerSlide = 3;
+      var next = $(this).next();
+      if (!next.length) {
+      next = $(this).siblings(':first');
+      }
+      next.children(':first-child').clone().appendTo($(this));
+      
+      for (var i=0;i<minPerSlide;i++) {
+          next=next.next();
+          if (!next.length) {
+              next = $(this).siblings(':first');
+            }
+          
+          next.children(':first-child').clone().appendTo($(this));
+        }
+  });
 
 
 
