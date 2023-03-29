@@ -5,7 +5,7 @@
   }
 
   nav{
-    position:absolute;
+    position: fixed;
     width: 100%;
     top:0px;
     height: 60px;
@@ -18,10 +18,10 @@
 
   .fa-solid {
     margin-left: 25px;
-  } */
+  } 
 
   section {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -34,6 +34,7 @@
     text-transform: uppercase;
   }
   .section1{
+    height: 100vh;
     background-image: url(photos/travel.jpg);
     background-size: 265vh 100%;
     font-size: 150%;
@@ -76,7 +77,21 @@
 		}
     #popular-des {
         display: flex;
+        margin-top: 40px;
+        margin-left: 55px;
     }
-    #popular-des2 {
-        display: flex;
+
+    .section2{
+        height: 100vh;
     }
+    figcaption{
+        font-size: x-large;
+        font-weight: bolder;
+        position: relative;
+        padding-top: 100px;
+        right: 190px;
+    
+    }
+    #pic-des:hover {
+        background-color: yellow;
+      }

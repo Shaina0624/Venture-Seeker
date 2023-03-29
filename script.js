@@ -1,7 +1,7 @@
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '8c3e878a53msh4f5244ae3c2d048p13e108jsn0e61851157af',
+		'X-RapidAPI-Key': '2df429e771msh05586fa7de4000dp18bf10jsne610e6ce195a',
 		'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
 	}
 };
@@ -49,8 +49,8 @@ function displayLocations(location, pictures){
         const pic = document.createElement('img');
         const caption = document.createElement('figcaption')
         pic.src = pictures[i]
-        pic.style.width = '100px'
-        pic.style.height = '100px'
+        pic.style.width = '300px'
+        pic.style.height = '300px'
         pic.style.borderRadius = "5px";
          caption.innerText = location[i]
         const frame = document.createElement('div');
@@ -59,10 +59,8 @@ function displayLocations(location, pictures){
         popularDes.append(frame)
         popularDes.append(caption)
     }
-
 }
 
-console.log("hi")
 
 
 document.querySelector("#search").addEventListener("submit", async (e) => {
