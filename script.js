@@ -1,7 +1,7 @@
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': 'dad1b6f6b2msh6c84084235fe255p12bdd0jsn0590d92acb5b',
+		'X-RapidAPI-Key': 'ce00b6d8bcmshf06e2c73f313135p1a6f4bjsndff080f47c4a',
 		'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
 	}
 };
@@ -61,20 +61,26 @@ function displayLocations(location, pictures){
     }
 }
 
+let inputDataSearch = "before"
 
 document.querySelector("#search").addEventListener("submit", async (e) => {
     e.preventDefault()
     const searchTerm = e.target[0].value
+    inputDataSearch = searchTerm
     console.log(searchTerm)
     const response3 = await fetch(`https://travel-advisor.p.rapidapi.com/locations/search?query=${searchTerm}&limit=30&offset=0&units=km&location_id=1&currency=USD&sort=relevance&lang=en_US`, options)
     const response4 = await fetch(`https://api.pexels.com/v1/search?query=${searchTerm}`,options2 );
     user3 = await response3.json();
     user4 = await response4.json();
+    term = user3
     console.log(user3)
     console.log(user4)
+    window.location.href = "activities.html"
     // console.log(user3.data[2].result_type)
     setAttrations(user3, user4);
 })
+
+console.log(inputDataSearch)
 
 function setAttrations(user3, user4){
     const picture = document.getElementById("image");
