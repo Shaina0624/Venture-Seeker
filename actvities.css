@@ -4,8 +4,9 @@
     box-sizing: border-box;
   }
 
-  body {
+  body, html {
     background-color: #C3C49E;
+    font-family: Italiana;
   }
   nav{
     position:absolute;
@@ -26,9 +27,11 @@
   .image {
     padding-left: 100px;
   }
+
   .location-description{
     padding-left: 20px;
   }
+
   section {
     height: 100vh;
     width: 100%;
@@ -39,14 +42,41 @@
     height: 75vh;
     width: 100%;
     display: flex;
+    justify-content: center;
   }
 
   #image {
     margin-top: 75px;
+    border-radius: 10px;
+    border: solid white 2px;
   }
 
-
 h1 {
+  display: flex;
+  justify-content: center;
+}
+
+#locationName{
+  text-align: center;
+  margin-top: 60px;
+  letter-spacing: .5em;
+}
+
+#locationsDescription {
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 3em;
+  padding-left: 3em;
+  word-spacing: 5px;
+}
+.section3{
+  height: 75vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.section4{
+  height: 75vh;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -116,6 +146,8 @@ h1 {
 }
 @media screen and (max-width: 550px) {
   .carousel div{
+  }
+  .carousel img{
     width: 100%;
   }
 }
