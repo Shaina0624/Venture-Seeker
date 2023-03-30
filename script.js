@@ -75,7 +75,7 @@ document.querySelector("#search").addEventListener("submit", async (e) => {
     term = user3
     console.log(user3)
     console.log(user4)
-    window.location.href = "activities.html"
+    // window.location.href = "activities.html"
     // console.log(user3.data[2].result_type)
     setAttrations(user3, user4);
 })
