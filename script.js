@@ -64,8 +64,6 @@ function displayLocations(location, pictures) {
   }
 }
 
-// let inputDataSearch = "before";
-
 document.querySelector("#search").addEventListener("submit", async (e) => {
   e.preventDefault();
   const searchTerm = e.target[0].value;
@@ -89,12 +87,19 @@ document.querySelector("#search").addEventListener("submit", async (e) => {
   setAttrations(user3, user4);
 });
 
-// console.log(inputDataSearch);
-
 function setAttrations(user3, user4) {
   const picture = document.getElementById("image");
   const locationName = document.getElementById("locationName");
   const locationsDescription = document.getElementById("locationsDescription");
+  const activity1 = document.getElementById("activity1");
+  const activity2 = document.getElementById("activity2");
+  const activity3 = document.getElementById("activity3");
+  const accommodations1 = document.getElementById("accommodations1");
+  const accommodations2 = document.getElementById("accommodations2");
+  const accommodations3 = document.getElementById("accommodations3");
+  const restaurants1 = document.getElementById("restaurants1");
+  const restaurants2 = document.getElementById("restaurants2");
+  const restaurants3 = document.getElementById("restaurants3");
   picture.src = user4.photos[0].src.large;
   picture.style.paddingLeft = "100px";
   picture.style.height = "500px";
@@ -102,17 +107,36 @@ function setAttrations(user3, user4) {
   let name = user3.data[0].result_object.location_string.toUpperCase();
   locationName.innerText = name;
   locationsDescription.innerText = user3.data[0].result_object.geo_description;
+
+  // save your data in the browser
+  //   window.localStorage.setItem('data', JSON.stringify({foo: 'bar'}))
+
+  //   // retrieve data from browser
+  //   const data = JSON.parse(window.localStorage.getItem('data'))
+
   for (let i = 0; i < 30; i++) {
     if (user3.data[i].result_type === "lodging") {
       console.log(user3.data[i].result_type);
+      accommodations1.src =
+        user3.data[i].result_object.photo.images.original.url;
+      accommodations2.src =
+        user3.data[i + 1].result_object.photo.images.original.url;
+      accommodations3.src =
+        user3.data[i + 2].result_object.photo.images.original.url;
     } else if (user3.data[i].result_type === "restaurants") {
       console.log(user3.data[i].result_type);
+      restaurants1.src = user3.data[i].result_object.photo.images.original.url;
+      restaurants2.src =
+        user3.data[i + 1].result_object.photo.images.original.url;
+      restaurants3.src =
+        user3.data[i + 2].result_object.photo.images.original.url;
     } else if (
       user3.data[i].result_type === "things_to_do" ||
-      user3.data[i].result_type === "activities" ||
-      user3.data[i].result_type === "geos"
+      user3.data[i].result_type === "activities"
     ) {
-      console.log(user3.data[i].result_type);
+      activity1.src = user3.data[i].result_object.photo.images.original.url;
+      activity2.src = user3.data[i + 1].result_object.photo.images.original.url;
+      activity3.src = user3.data[i + 2].result_object.photo.images.original.url;
     }
   }
 }
