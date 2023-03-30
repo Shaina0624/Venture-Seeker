@@ -1,7 +1,7 @@
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '2df429e771msh05586fa7de4000dp18bf10jsne610e6ce195a',
+		'X-RapidAPI-Key': 'dad1b6f6b2msh6c84084235fe255p12bdd0jsn0590d92acb5b',
 		'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
 	}
 };
@@ -72,7 +72,7 @@ document.querySelector("#search").addEventListener("submit", async (e) => {
     user4 = await response4.json();
     console.log(user3)
     console.log(user4)
-    console.log(user3.data[2].result_type)
+    // console.log(user3.data[2].result_type)
     setAttrations(user3, user4);
 })
 
@@ -84,22 +84,22 @@ function setAttrations(user3, user4){
     picture.style.paddingLeft = '100px'
     picture.style.height  = '500px';
     picture.style.width  = '700px'
-    locationName.innerText = user3.data[0].result_object.location_string;
+    let name = user3.data[0].result_object.location_string.toUpperCase()
+    locationName.innerText = name
     locationsDescription.innerText = user3.data[0].result_object.geo_description;
     for(let i = 0; i < 30; i++ ){
         if(user3.data[i].result_type === 'lodging'){
             console.log(user3.data[i].result_type)
 
-
         } else if (user3.data[i].result_type === 'restaurants'){
             console.log(user3.data[i].result_type)
 
         } else if (user3.data[i].result_type === 'things_to_do' || user3.data[i].result_type === 'activities' || user3.data[i].result_type === 'geos'){
-            console.log(user3.data[i].result_type)
-
+            console.log(user3.data[i].result_type) 
         }
     }
 }
+
 
 
 
