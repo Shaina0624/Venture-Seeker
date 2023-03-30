@@ -101,5 +101,3 @@ function setAttrations(user3, user4){
 }
 
 
-
-
