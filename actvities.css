@@ -63,16 +63,33 @@ h1 {
   padding-left: 3em;
   word-spacing: 5px;
 }
-.section3{
 
+.section2{
+  text-align: center;
   display: flex;
   justify-content: center;
+  gap: 75px;
+}
+.card{
+  border-radius: 10px;
+}
+#activity1{
+
+}
+
+.section3{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 75px;
 }
 .section4{
-
+  text-align: center;
   display: flex;
   justify-content: center;
+  gap: 75px;
 }
+
 
   .wrapper{margin:10vh}
   
