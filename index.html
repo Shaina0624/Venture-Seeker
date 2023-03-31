@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Venture Seeker</title>
-		<script src="https://kit.fontawesome.com/875826f5cf.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<link href='https://fonts.googleapis.com/css?family=Italiana' rel='stylesheet'>
-        <link rel="stylesheet" href="styles.css">
-		<style>
-		</style>
-	</head>
-	<body>
-		<nav>
-			<!-- Hover: Changes photos -->
-			<h1>Popular Destination</h1>
-			<button type="button">Search</button>
-		</nav>
-		<section>
-			<h1>Venture Seeker</h1>
-		</section>
-	</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venture Seeker</title>
+    <script
+      src="https://kit.fontawesome.com/875826f5cf.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Italiana"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <!-- Hover: Changes photos with time -->
+      <h1 class="popular-destination">Popular Destination</h1>
+      <button>Search</button>
+    </nav>
+    <section>
+      <h1 class="title">Venture Seeker</h1>
+    </section>
+    <script>
+		function changeBackground(){
+    const images = [
+      'url("https://images.pexels.com/photos/7263332/pexels-photo-7263332.jpeg?auto=compress&cs=tinysrgb&w=1500")',
+      'url("https://images.pexels.com/photos/529621/pexels-photo-529621.jpeg?auto=compress&cs=tinysrgb&w=1500")',
+      'url("https://images.pexels.com/photos/258117/pexels-photo-258117.jpeg?auto=compress&cs=tinysrgb&w=1500")'
+    ]
+    const body = document.querySelector('body')
+    const background = images[Math.floor(Math.random()*images.length)];
+    body.style.backgroundImage = background;
+  }
+  setInterval(changeBackground, 1000)
+	</script>
+  </body>
 </html>
