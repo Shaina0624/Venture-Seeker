@@ -24,6 +24,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
 
   nav > * {
@@ -39,7 +40,6 @@
     cursor: pointer;
     border: 1px solid white;
     background-color: transparent;
-    color: white;
   }
 
   button:hover {
@@ -50,3 +50,5 @@
   .title {
     font-size: 75px;
   }
+
+  @media 
