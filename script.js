@@ -76,7 +76,7 @@ const options = {
       term = user3
       console.log(user3)
       console.log(user4)
-      window.location.href = "activities.html"
+    //   window.location.href = "activities.html"
       // console.log(user3.data[2].result_type)
       setAttrations(user3, user4);
   })
@@ -134,3 +134,16 @@ const options = {
       }
     }
   }
+
+  //Background Changes//
+  function changeBackground(){
+    const images = [
+      'url("https://images.pexels.com/photos/6769034/pexels-photo-6769034.jpeg?auto=compress&cs=tinysrgb&w=1500&h=750&dpr=2")',
+      'url("https://images.pexels.com/photos/3250361/pexels-photo-3250361.jpeg?auto=compress&cs=tinysrgb&w=1500")',
+      'url("https://images.pexels.com/photos/258117/pexels-photo-258117.jpeg?auto=compress&cs=tinysrgb&w=1500")'
+    ]
+    const body = document.querySelector('body')
+    const background = images[Math.floor(Math.random()*images.length)];
+    body.style.backgroundImage = background;
+  }
+  setInterval(changeBackground, 1000)
