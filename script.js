@@ -64,10 +64,9 @@ const options = {
     }
   }
   
-  document.querySelector("#search").addEventListener("submit", async (e) => {
+  document.querySelector("form").addEventListener("submit", async (e) => {
       e.preventDefault()
-      const searchTerm = e.target[0].value
-      inputDataSearch = searchTerm
+      const searchTerm = document.querySelector("#search").value
       console.log(searchTerm)
       const response3 = await fetch(`https://travel-advisor.p.rapidapi.com/locations/search?query=${searchTerm}&limit=30&offset=0&units=km&location_id=1&currency=USD&sort=relevance&lang=en_US`, options)
       const response4 = await fetch(`https://api.pexels.com/v1/search?query=${searchTerm}`,options2 );
