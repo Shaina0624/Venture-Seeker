@@ -16,7 +16,7 @@ nav{
   height: 60px;
   opacity: 0.7;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -140,3 +140,5 @@ gap: 75px;
   .topnav input[type=text] {
     border: 1px solid #ccc;
   }
+}
+

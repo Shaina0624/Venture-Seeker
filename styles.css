@@ -21,6 +21,7 @@
 
   section {
     height: 90vh;
+    text-align: center;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -51,4 +52,8 @@
     font-size: 75px;
   }
 
-  @media 
+  @media (max-width: 576px){
+    h2{
+      height: 1rem;
+    }
+  }
