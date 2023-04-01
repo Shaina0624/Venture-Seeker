@@ -21,9 +21,11 @@
 
   section {
     height: 90vh;
+    text-align: center;
     display:flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
 
   nav > * {
@@ -39,7 +41,6 @@
     cursor: pointer;
     border: 1px solid white;
     background-color: transparent;
-    color: white;
   }
 
   button:hover {
@@ -49,4 +50,10 @@
 
   .title {
     font-size: 75px;
+  }
+
+  @media (max-width: 576px){
+    h2{
+      height: 1rem;
+    }
   }
