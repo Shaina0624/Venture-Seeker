@@ -23,40 +23,32 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" id='homeBotton'aria-current="page" href="index.html">Home</a>
                   </li>
                 </ul>
                 <form class="d-flex" role="search">
                   <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
+                  <button class="btn btn-outline-success" id='searchButton'type="submit">Search</button>
                 </form>
               </div>
             </div>
           </nav>
           <section class="middle" id="location">
-            <div class="container text-center">
-                <div class="row row-cols-2">
-                  <div class="col"></div>
-                  <h1 class="col">Location</h1>
-                  <div class="col"><img/></div>
-                  <div class="col">desctiption</div>
-                </div>
-              </div>
+            <div id="imagebox"><img id="image" src="https://images.pexels.com/photos/1525612/pexels-photo-1525612.jpeg?auto=compress&cs=tinysrgb&w=800"></div>
+            <h1 id="locationName"> NEW YORK CITY, NY
+            <div id="locationDescription">
+                Conquering New York in one visit is impossible. Instead, hit the must-sees the Empire State Building, the Statue of Liberty, Central Park, the Metropolitan Museum of Art and then explore off the beaten path with visits to The Cloisters or one of the city’s libraries. Indulge in the bohemian shops of the West Village or the fine dining of the Upper West Side. The bustling marketplace inside of Grand Central Station gives you a literal taste of the best the city has to offer. 
+                
+            </div>
+            </h1>
+ 
         </section>
         <section class="middle" id="activities">
             <section class="pt-5 pb-5">
                 <div class="container">
                     <div class="row">
                         <div class="col-6">
-                            <h3 class="mb-3">Carousel cards title </h3>
-                        </div>
-                        <div class="col-6 text-right">
-                            <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
-                                <i class="fa fa-arrow-left"></i>
-                            </a>
-                            <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
-                                <i class="fa fa-arrow-right"></i>
-                            </a>
+                            <h3 class="mb-3">Activities</h3>
                         </div>
                         <div class="col-12">
                             <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
@@ -67,31 +59,38 @@
             
                                             <div class="col-md-4 mb-3">
                                                 <div class="card">
-                                                    <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d">
+                                                    <img class="img-fluid" id="activitiesImg1" alt="100%x280" src="https://images.pexels.com/photos/356844/pexels-photo-356844.jpeg?auto=compress&cs=tinysrgb&w=800">
                                                     <div class="card-body">
-                                                        <h4 class="card-title">Special title treatment</h4>
-                                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            
-                                                    </div>
-            
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 mb-3">
-                                                <div class="card">
-                                                    <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">Special title treatment</h4>
-                                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            
+                                                        <h4 class="card-title" id="activitiesTitle1">Statue of Liberty</h4>
+                                                        <p class="card-text" id = "activitiyDescription1">Location: New York, NY 10004
+                                                            <br>
+                                                            Rating: 4.7
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-4 mb-3">
                                                 <div class="card">
-                                                    <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3d2e8a2039c06dd26db977fe6ac6186a">
+                                                    <img class="img-fluid" id="activitiesImg2" alt="100%x280" src="https://images.pexels.com/photos/802024/pexels-photo-802024.jpeg?auto=compress&cs=tinysrgb&w=800">
                                                     <div class="card-body">
-                                                        <h4 class="card-title">Special title treatment</h4>
-                                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                                        <h4 class="card-title" id="activitiesTitle2">Times Square</h4>
+                                                        <p class="card-text" id="activitiyDescription2">Location: Manhattan, NY 10036
+                                                            <br>
+                                                            Rating: 4.7
+                                                        </p>
+            
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <div class="card">
+                                                    <img class="img-fluid" id="activitiesImg3" alt="100%x280" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/61/95/89/the-met-fifth-avenue.jpg?w=1200&h=-1&s=1">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title" id="activitiesTitle3">The Metropolitan Museum of Art</h4>
+                                                        <p class="card-text" id="activitiyDescription3">Location: 1000 5th Ave, New York, NY 10028
+                                                            <br>
+                                                            Rating: 4.7
+                                                        </p>
             
                                                     </div>
                                                 </div>
@@ -99,77 +98,6 @@
             
                                         </div>
                                     </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-            
-                                            <div class="col-md-4 mb-3">
-                                                <div class="card">
-                                                    <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532771098148-525cefe10c23?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3f317c1f7a16116dec454fbc267dd8e4">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">Special title treatment</h4>
-                                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            
-                                                    </div>
-            
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 mb-3">
-                                                <div class="card">
-                                                    <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532715088550-62f09305f765?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ebadb044b374504ef8e81bdec4d0e840">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">Special title treatment</h4>
-                                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 mb-3">
-                                                <div class="card">
-                                                    <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=0754ab085804ae8a3b562548e6b4aa2e">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">Special title treatment</h4>
-                                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            
-                                                    </div>
-                                                </div>
-                                            </div>
-            
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row">
-            
-                                            <div class="col-md-4 mb-3">
-                                                <div class="card">
-                                                    <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ee8417f0ea2a50d53a12665820b54e23">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">Special title treatment</h4>
-                                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            
-                                                    </div>
-            
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 mb-3">
-                                                <div class="card">
-                                                    <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532777946373-b6783242f211?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=8ac55cf3a68785643998730839663129">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">Special title treatment</h4>
-                                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 mb-3">
-                                                <div class="card">
-                                                    <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532763303805-529d595877c5?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=5ee4fd5d19b40f93eadb21871757eda6">
-                                                    <div class="card-body">
-                                                        <h4 class="card-title">Special title treatment</h4>
-                                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -178,44 +106,106 @@
                 </div>
             </section>
         </section>
+
+
         <section class="middle" id="resturants">
+            <section class="pt-5 pb-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <h3 class="mb-3">Resturants</h3>
+                        </div>
+                        <div class="col-12">
+                            <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+            
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="row">
+            
+                                            <div class="col-md-4 mb-3">
+                                                <div class="card">
+                                                    <img class="img-fluid" id="resturantImg1"alt="100%x280" src="https://usmenuguide.com/wp-content/uploads/2019/10/PeterLugerSteakHousebrooklyn3.jpg">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title" id="resturantTitle1">Peter Luger</h4>
+                                                        <p class="card-text" id ="resturantDescription1">Location: Brooklyn, NY 11211
+                                                            <br>
+                                                            Rating: 4.4
+                                                        </p>
+            
+                                                    </div>
+            
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <div class="card">
+                                                    <img class="img-fluid" id="resturantImg2" alt="100%x280" src="https://www.fromthesquare.org/wp-content/uploads/2014/11/Katzs_Delicatessen.jpg">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title" id="resturantTitle2">Katz Delicatessen</h4>
+                                                        <p class="card-text" id ="resturantDescription2">Location: New York, NY 10002
+                                                            <br>
+                                                            Rating: 4.5
+                                                        </p>
+            
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <div class="card">
+                                                    <img class="img-fluid" id="resturantImg3" alt="100%x280" src="https://www.travelandleisure.com/thmb/O3UkWaADo-4JsJBaoSciGNDDT-g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/oyster-bar-grand-central-station-NYCOYSTERS0821-2a297218fce54116829d6ce020c5870c.jpg">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title" id="resturantTitle3">Grand Central Oyster Bar</h4>
+                                                        <p class="card-text" id ="resturantDescription3">Location: New York, NY 10017
+                                                            <br>
+                                                            Rating: 4.2
+                                                        </p>
+            
+                                                    </div>
+                                                </div>
+                                            </div>
+            
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
         </section>
-        <section class="middle" id="accomidations">
-
-        </section>
-        <footer class="bg-dark text-center text-white">
+        <footer class="text-center text-white" style="background-color: black;">
             <!-- Grid container -->
             <div class="container p-4 pb-0">
               <!-- Section: Social media -->
               <section class="mb-4">
                 <!-- Facebook -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com" role="button"
                   ><i class="fab fa-facebook-f"></i
                 ></a>
           
                 <!-- Twitter -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com" role="button"
                   ><i class="fab fa-twitter"></i
                 ></a>
           
                 <!-- Google -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                <a class="btn btn-outline-light btn-floating m-1" href="google.com" role="button"
                   ><i class="fab fa-google"></i
                 ></a>
           
                 <!-- Instagram -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com" role="button"
                   ><i class="fab fa-instagram"></i
                 ></a>
           
                 <!-- Linkedin -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                <a class="btn btn-outline-light btn-floating m-1" href="https://linkedin.com" role="button"
                   ><i class="fab fa-linkedin-in"></i
                 ></a>
           
                 <!-- Github -->
-                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/" role="button"
                   ><i class="fab fa-github"></i
                 ></a>
               </section>
@@ -233,9 +223,7 @@
 
         <script type="text/javascript" src="script.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"></script> -->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
-
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
 </html>
