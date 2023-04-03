@@ -10,10 +10,9 @@
   
   }
   nav{
-    position: fixed;
+    position: sticky;
     width: 100%;
-    top: 20px;
-    height: 10vh;
+    height: 0vh;
     background-color: transparent;
     display: flex;
     justify-content: space-between;
@@ -48,17 +47,19 @@
 
   .popular-destination{
     font-size: 20px;
+    margin-top: 20px;
   }
 
   button{
     margin-right: 50px;
+    margin-top: 15px;
     cursor: pointer;
     border: 1px solid white;
     background-color: transparent;
-    padding-left: 35px;
-    padding-right: 35px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   button:hover {
