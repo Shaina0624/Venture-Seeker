@@ -64,6 +64,8 @@ a.nav-link:hover {
   font-size: 15px;
   line-height: 45px;
   padding-top: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .img-fluid{
