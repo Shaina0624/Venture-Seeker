@@ -20,7 +20,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body id="frontPage">
     <nav>
       <!-- Hover: Changes photos with time -->
       <h1 class="popular-destination">Popular Destination</h1>
@@ -40,7 +40,7 @@
 	  'url("https://images.pexels.com/photos/10363509/pexels-photo-10363509.jpeg?auto=compress&cs=tinysrgb&w=1500")',
 	  'url("https://images.pexels.com/photos/1553960/pexels-photo-1553960.jpeg?auto=compress&cs=tinysrgb&w=1500")'
     ]
-    const body = document.querySelector('body')
+    const body = document.querySelector('#frontPage')
     const background = images[Math.floor(Math.random()*images.length)];
     body.style.backgroundImage = background;
   }
