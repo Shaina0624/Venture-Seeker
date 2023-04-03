@@ -28,10 +28,114 @@
       <button>Search</button>
     </a>
     </nav>
-    <section>
+    <section class = 'topSection'>
       <h1 class="title">Venture Seeker</h1>
 	  <h2>Embrace the Unknown, Seek new Adventures</h2>
     </section>
+
+    
+    <section class="vacationSpots">
+        <section class="pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <h1 class="mb-3" id="section2Title">Who are we?</h1>
+                    </div>
+                    <div class="col-12">
+                        <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+        
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+        
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card">
+                                                <img class="img-fluid" id="resturantImg1"alt="100%x280" src="https://www.piscoandbier.com/wp-content/uploads/2021/05/lake-tahoe-summer-773x966.jpg">
+                                                <div class="card-body">
+                                                    <h4 class="card-title" id="resturantTitle1">Activities</h4>
+                                                    <p class="card-text" id ="resturantDescription1">Notable destinations within the location of your next visit.</p>
+        
+                                                </div>
+        
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card">
+                                                <img class="img-fluid" id="resturantImg2" alt="100%x280" src="https://www.travelandleisure.com/thmb/Jw-KKDrA6z1nvDJbr5kyKJSG4vk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-header-oiji-mi-NEWNYCDINE0223-8c392080598d44dbafdbc87bbcf4d7dd.jpg">
+                                                <div class="card-body">
+                                                    <h4 class="card-title" id="resturantTitle2">Resturants</h4>
+                                                    <p class="card-text" id ="resturantDescription2">Restaurants to explore on your upcoming visit</p>
+        
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card">
+                                                <img class="img-fluid" id="resturantImg3" alt="100%x280" src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,f_jpg,h_470,q_65,w_640/v1/clients/wilmingtonnc/ff2c5ff3_70de_445b_a001_29b51aa8dec6_81ccd151-7cb3-4f33-a9b6-431bbaef4009.jpg">
+                                                <div class="card-body">
+                                                    <h4 class="card-title" id="resturantTitle3">Accomidations</h4>
+                                                    <p class="card-text" id ="resturantDescription3">Places to stay on your next trip</p>
+        
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <footer class="text-center text-white" style="background-color: black;">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com"  role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+    
+          <!-- Twitter -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com" role="button"
+            ><i class="fab fa-twitter"></i
+          ></a>
+    
+          <!-- Google -->
+          <a class="btn btn-outline-light btn-floating m-1" href="google.com" role="button"
+            ><i class="fab fa-google"></i
+          ></a>
+    
+          <!-- Instagram -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com" role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+    
+          <!-- Linkedin -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://linkedin.com" role="button"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+    
+          <!-- Github -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/" role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2023 Copyright:
+        <a class="text-white" href="">Venture Seeker</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
     <script>
 		function changeBackground(){
     const images = [
@@ -42,57 +146,11 @@
 	  'url("https://images.pexels.com/photos/10363509/pexels-photo-10363509.jpeg?auto=compress&cs=tinysrgb&w=1500")',
 	  'url("https://images.pexels.com/photos/1553960/pexels-photo-1553960.jpeg?auto=compress&cs=tinysrgb&w=1500")'
     ]
-    const body = document.querySelector('#frontPage')
+    const body = document.querySelector('.topSection')
     const background = images[Math.floor(Math.random()*images.length)];
     body.style.backgroundImage = background;
   }
   setInterval(changeBackground, 1000)
 	</script>
   </body>
-  <footer class="bg-dark text-center text-white">
-    <!-- Grid container -->
-    <div class="container p-4 pb-0">
-      <!-- Section: Social media -->
-      <section class="mb-4">
-        <!-- Facebook -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-facebook-f"></i
-        ></a>
-  
-        <!-- Twitter -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-twitter"></i
-        ></a>
-  
-        <!-- Google -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-google"></i
-        ></a>
-  
-        <!-- Instagram -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-instagram"></i
-        ></a>
-  
-        <!-- Linkedin -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-linkedin-in"></i
-        ></a>
-  
-        <!-- Github -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-github"></i
-        ></a>
-      </section>
-      <!-- Section: Social media -->
-    </div>
-    <!-- Grid container -->
-  
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2023 Copyright:
-      <a class="text-white" href="">Venture Seeker</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
 </html>

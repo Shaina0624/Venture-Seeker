@@ -42,6 +42,28 @@ const resturantImg3 = document.getElementById("resturantImg3");
 const resturantTitle3 = document.getElementById("resturantTitle3");
 const resturantDescription3 = document.getElementById("resturantDescription3");
 
+/////////////////////////////////
+///Variables for accomidations///
+////////////////////////////////
+
+const accomidationstImg1 = document.getElementById("accomidationsImg1");
+const accomidationsTitle1 = document.getElementById("accomidationsTitle1");
+const accomidationsDescription1 = document.getElementById(
+  "accomidationsDescription1"
+);
+
+const accomidationsImg2 = document.getElementById("accomidationsImg2");
+const accomidationsTitle2 = document.getElementById("accomidationsTitle2");
+const accomidationsDescription2 = document.getElementById(
+  "accomidationsDescription2"
+);
+
+const accomidationsImg3 = document.getElementById("accomidationsImg3");
+const accomidationsTitle3 = document.getElementById("accomidationsTitle3");
+const accomidationsDescription3 = document.getElementById(
+  "accomidationsDescription3"
+);
+
 window.addEventListener("DOMContentLoaded", async () => {
   fetchLocation();
 });
@@ -57,7 +79,6 @@ async function fetchLocation() {
   for (let i = 0; i < 4; i++) {
     locations.push(user.data[i].result_object.address);
   }
-  console.log(locations);
   pexelFetch(locations);
 }
 
@@ -69,7 +90,6 @@ async function pexelFetch(locations) {
       options2
     );
     let user2 = await response2.json();
-    console.log(user2);
     pictures.push(user2.photos[3].src.landscape);
   }
   displayLocations(locations, pictures);
@@ -96,7 +116,6 @@ function displayLocations(location, pictures) {
 document.querySelector("form").addEventListener("submit", async (e) => {
   e.preventDefault();
   const searchTerm = document.querySelector("#search").value;
-  console.log(searchTerm);
   const response3 = await fetch(
     `https://travel-advisor.p.rapidapi.com/locations/search?query=${searchTerm}&limit=30&offset=0&units=km&location_id=1&currency=USD&sort=relevance&lang=en_US`,
     options
@@ -107,8 +126,6 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   );
   user3 = await response3.json();
   user4 = await response4.json();
-  console.log(user3);
-  console.log(user4);
   setAttrations(user3, user4);
 });
 
@@ -177,7 +194,7 @@ function setAttrations(user3, user4) {
       resturantTitle1.innerText = user3.data[i].result_object.name;
       resturantDescription1.innerText = `Location:${user3.data[i].result_object.location_string}
             Rating:${user3.data[i].result_object.rating}`;
-      activitiesAndRestaurants.add(user3.data[i]); // add the actual object to the Set
+      activitiesAndRestaurants.add(user3.data[i]);
       break;
     }
   }
@@ -190,7 +207,7 @@ function setAttrations(user3, user4) {
       resturantTitle2.innerText = user3.data[i].result_object.name;
       resturantDescription2.innerText = `Location:${user3.data[i].result_object.location_string}
             Rating:${user3.data[i].result_object.rating}`;
-      activitiesAndRestaurants.add(user3.data[i]); // add the actual object to the Set
+      activitiesAndRestaurants.add(user3.data[i]); 
       break;
     }
   }
@@ -203,16 +220,51 @@ function setAttrations(user3, user4) {
       resturantTitle3.innerText = user3.data[i].result_object.name;
       resturantDescription3.innerText = `Location:${user3.data[i].result_object.location_string}
             Rating:${user3.data[i].result_object.rating}`;
-      activitiesAndRestaurants.add(user3.data[i]); // add the actual object to the Set
+      activitiesAndRestaurants.add(user3.data[i]);
+      break;
+    }
+  }
+  for (let i = 0; i < 30; i++) {
+    if (
+      activitiesAndRestaurants.has(user3.data[i]) === false &&
+      user3.data[i].result_type === "lodging"
+    ) {
+      accomidationsImg1.src =
+        user3.data[i].result_object.photo.images.original.url;
+      accomidationsTitle1.innerText = user3.data[i].result_object.name;
+      accomidationsDescription1.innerText = `Location:${user3.data[i].result_object.location_string}
+          Rating:${user3.data[i].result_object.rating}`;
+      activitiesAndRestaurants.add(user3.data[i]); 
+      break;
+    }
+  }
+  for (let i = 0; i < 30; i++) {
+    if (
+      activitiesAndRestaurants.has(user3.data[i]) === false &&
+      user3.data[i].result_type === "lodging"
+    ) {
+      accomidationsImg2.src =
+        user3.data[i].result_object.photo.images.original.url;
+      accomidationsTitle2.innerText = user3.data[i].result_object.name;
+      accomidationsDescription2.innerText = `Location:${user3.data[i].result_object.location_string}
+          Rating:${user3.data[i].result_object.rating}`;
+      activitiesAndRestaurants.add(user3.data[i]);
       break;
     }
   }
 
-  console.log(activitiesAndRestaurants);
+  for (let i = 0; i < 30; i++) {
+    if (
+      activitiesAndRestaurants.has(user3.data[i]) === false &&
+      user3.data[i].result_type === "lodging"
+    ) {
+      accomidationsImg3.src =
+        user3.data[i].result_object.photo.images.original.url;
+      accomidationsTitle3.innerText = user3.data[i].result_object.name;
+      accomidationsDescription3.innerText = `Location:${user3.data[i].result_object.location_string}
+          Rating:${user3.data[i].result_object.rating}`;
+      activitiesAndRestaurants.add(user3.data[i]);
+      break;
+    }
+  }
 }
-
-// save your data in the browser
-//   window.localStorage.setItem('data', JSON.stringify({foo: 'bar'}))
-
-//   // retrieve data from browser
-//   const data = JSON.parse(window.localStorage.getItem('data'))

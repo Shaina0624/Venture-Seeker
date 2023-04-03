@@ -7,7 +7,7 @@
   }
 
   body{
-    background-image: url('https://images.pexels.com/photos/415604/pexels-photo-415604.jpeg?auto=compress&cs=tinysrgb&w=1500');
+  
   }
   nav{
     position: fixed;
@@ -19,14 +19,28 @@
     justify-content: space-between;
   }
 
-  section {
-    height: 90vh;
+  .topSection {
+    background-image: url('https://images.pexels.com/photos/415604/pexels-photo-415604.jpeg?auto=compress&cs=tinysrgb&w=1500');
+    height: 100vh;
     text-align: center;
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
+  .vacationSpots{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: #E0E0DA;
+
+
+
+  }
+  /* .vacationSpots{
+    display: flex;
+    justify-content: center;
+  } */
 
   nav > * {
     padding: 0 50px;
@@ -48,8 +62,9 @@
   }
 
   button:hover {
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
+    border-color: black;
   }
 
   .title {
@@ -75,11 +90,39 @@
     color: black;
     border-color: black;
   }
-  
-  .mb-4 {
-    display: flex;
-    flex-direction: row;
+
+  #imagebox{
+    width: 75%;
+    height: 80%;
+    border: solid;
+    margin-left: 30px;
   }
+
+  #image{
+    width: 100%;
+    height: 100%;
+  }
+
+  .img-fluid{
+    height: 350px;
+    width: 500px;
+  }
+  .card-body {
+    color: black;
+  }
+  .card-text{
+    color: black;
+  }
+  .card-body {
+    height: 120px;
+  }
+  #section2Title{
+    color: black;
+  }
+
+.my-3,  .my-3  {
+    color: black !important;
+}
 
   @media (max-width: 576px){
     h2{
