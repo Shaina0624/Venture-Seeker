@@ -1,7 +1,7 @@
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "cf20d356f0msh262851abf2aedd2p1d2d60jsn7e0a76a1272e",
+    "X-RapidAPI-Key": "bddbd07e2fmsh0de35a88f0791aap141a63jsnfe759094cd7d",
     "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com",
   },
 };
@@ -207,7 +207,7 @@ function setAttrations(user3, user4) {
       resturantTitle2.innerText = user3.data[i].result_object.name;
       resturantDescription2.innerText = `Location:${user3.data[i].result_object.location_string}
             Rating:${user3.data[i].result_object.rating}`;
-      activitiesAndRestaurants.add(user3.data[i]); 
+      activitiesAndRestaurants.add(user3.data[i]);
       break;
     }
   }
@@ -234,7 +234,7 @@ function setAttrations(user3, user4) {
       accomidationsTitle1.innerText = user3.data[i].result_object.name;
       accomidationsDescription1.innerText = `Location:${user3.data[i].result_object.location_string}
           Rating:${user3.data[i].result_object.rating}`;
-      activitiesAndRestaurants.add(user3.data[i]); 
+      activitiesAndRestaurants.add(user3.data[i]);
       break;
     }
   }
